@@ -1,19 +1,22 @@
 
-import './App.css' ;
-import Button from './components/Buttons/Button';
+import { Suspense } from 'react';
+import './App.css';
+import FoodSection from './components/FoodSection/FoodSection';
+import Navbar from './components/Navbar/Navbar';
+
+
+const FoodDataRes = fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a').then(res => res.json());
 
 function App() {
-
-
- 
 
   return (
     <>
 
-    <Button bgColor={'red'} text={'No add'}></Button>
-    <Button bgColor={'salmon'} text={'No/Yes add'}></Button>
+      <Navbar></Navbar>
+      <Suspense fallback={<p>Loading...</p>}>
+        <FoodSection FoodDataRes={FoodDataRes}></FoodSection>
 
-
+      </Suspense>
     </>
   )
 }
