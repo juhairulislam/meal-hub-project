@@ -1,22 +1,19 @@
 
-import { useState } from 'react'
-import './App.css'
+import './App.css' ;
+import Button from './components/Buttons/Button';
 
 function App() {
 
-  const [num, setNum] = useState(0);
 
-  const changeNumber = () =>{
-
-    setNum(num+1) ;
-  }
+ 
 
   return (
     <>
-    <h1>{num}</h1>
-    <br />
-    <button onClick={changeNumber}>Click for change num</button>
-     
+
+    <Button bgColor={'red'} text={'No add'}></Button>
+    <Button bgColor={'salmon'} text={'No/Yes add'}></Button>
+
+
     </>
   )
 }
