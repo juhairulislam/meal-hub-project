@@ -1,6 +1,6 @@
 *{
   padding: 0;
-  margin: 0 auto;
+  margin:0;
   box-sizing: border-box;
 }
 
@@ -9,7 +9,16 @@
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 20px;
-  max-width: 1000px;
-  margin: 60px auto;
+  
+}
 
+.food-container-parent{
+  max-width: 1000px;
+  display: flex;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.cart-container{
+  background-color: cadetblue;
 }
